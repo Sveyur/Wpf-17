@@ -19,16 +19,15 @@ namespace Wpf_17
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {
-        private void colorPicker_ColorChanged(object sender, RoutedPropertyChangedEventArgs e)
-        {
-            txb.Text = e.NewValue.ToString();
-        }
+    {        
 
         public MainWindow()
         {
             InitializeComponent();            
         }
-        
+        private void onColorChanged(object sender, RoutedPropertyChangedEventArgs<Color> e)
+        {
+           txb.Text = e.NewValue.ToString();
+        }
     }
 }

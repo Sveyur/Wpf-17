@@ -8,7 +8,8 @@
 
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <local:User Width="400" VerticalAlignment="Center" x:Name="colorPicker" Margin="5" ColorChanged="colorPicker_ColorChanged" />
-    </Grid>
+    <StackPanel>
+        <local:User Width="400" VerticalAlignment="Center" x:Name="colorPicker" Margin="5" ColorChanged="onColorChanged" />
+        <TextBlock x:Name="txb" />
+    </StackPanel>
 </Window>
